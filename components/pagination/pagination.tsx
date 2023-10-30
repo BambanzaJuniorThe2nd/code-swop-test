@@ -11,7 +11,7 @@ const Pagination = ({
 }: PaginationProps) => {
   const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
   return (
-    <nav className="flex justify-center space-x-2 my-3">
+    <nav className="flex-col justify-between items-center my-4 text-center">
       {pageNumbers.map((pageNumber) => (
         <button
           key={pageNumber}

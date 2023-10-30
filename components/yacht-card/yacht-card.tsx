@@ -7,7 +7,7 @@ import numeral from "numeral";
 
 const YachtCard = ({ data }: { data: YachtData }) => {
   return (
-    <div className="w-[22.5rem] h-[24.375rem]">
+    <div className="lg:w-[19rem] md:w-[18.5rem] md:h-[24.375rem] sm:w-[16.5rem] xs:w-[22.5rem]">
       <div className="relative">
         <GoHeart
           className="absolute right-3 top-3 text-white"
