@@ -1,0 +1,1 @@
+export { default as YachtCard } from "./yacht-card";
