@@ -31,15 +31,15 @@ const Home = () => {
   const yachtsToShow: YachtData[] = data ? data.slice(startIndex, endIndex) : [];
 
   return (
-    <div className="w-full h-screen px-40 pt-3">
-      <div className="flex justify-between items-center">
-        <h1 className="text-[#202D31] font-Alata text-[24px] font-[400]">
+    <div className="w-full h-screen px-16 pt-3">
+      <div className="flex xs:flex-col sm:flex-row justify-between items-center my-4 text-center">
+        <h1 className="text-[#202D31] font-Alata lg:text-[24px] lg:font-[400] md:text-[20px] text-center">
           Results: {data?.length} yachts
         </h1>
-        <div className="flex justify-between items-center">
-          <AiOutlineSearch className="mr-3 text-[#5E9199]" size={"2rem"} />
+        <div className="flex justify-evenly items-center">
+          <AiOutlineSearch className="mr-3 text-[#5E9199] sm:block" size={"2rem"} />
           <select
-            className="w-[206px] h-[51px] px-3 bg-white rounded-md border border-[#EBF1F3]"
+            className="w-[206px] xs:mt-3 h-[51px]  px-3 bg-white rounded-md border border-[#EBF1F3]"
             name="cars"
             id="cars"
           >
@@ -48,7 +48,7 @@ const Home = () => {
         </div>
       </div>
 
-      <section className="mt-5 grid grid-cols-3 gap-6">
+      <section className="mt-5 grid lg:grid-cols-3 sm:grid-cols-2 gap-5 justify-items-center">
         {yachtsToShow.map((yacht: YachtData, index: number) => (
           <YachtCard key={index} data={yacht} />
         ))}
@@ -59,7 +59,6 @@ const Home = () => {
         totalPages={Math.ceil(totalItems / itemsPerPage)}
         onPageChange={handlePageChange}
       />
-      
     </div>
   );
 };
